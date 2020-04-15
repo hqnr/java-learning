@@ -1,0 +1,80 @@
+Calcular nota.
+code:
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		float nota1, nota2, nota3, nota4, media;
+		System.out.print("Digite as notas que você tirou: ");
+		nota1 = input.nextFloat();
+		nota2 = input.nextFloat();
+		nota3 = input.nextFloat();
+		nota4 = input.nextFloat();
+		media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+		if (media < 3) {
+			System.out.printf("Aluno reprovado. Média %f.", media);
+		}
+		if (media >= 3 && media < 7) {
+			System.out.printf("Aluno em recuperação. Média %f.", media);
+		}
+		if (media > 7) {
+			System.out.printf("Aluno aprovado! Média %f.", media);
+		}
+
+	}
+}
+--------------------------------------------------------------------------------------
+1. Crie um programa para receber um número e indicar se ele é par ou ímpar.
+code:
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Digite um número: ");
+		int num = input.nextInt();
+		
+		if (num % 2 == 0) {
+			System.out.printf("%d é par.", num);
+		} else {
+			System.out.printf("%d é ímpar.", num);
+		}
+	}
+}
+-------------------------------------------------------------------------------------
+2. Crie um programa para receber uma letra do usuário e imprimir o nome de um país que se inicie com essa letra. 
+Caso não exista um país com nome iniciado pela letra digitada, informar isso ao usuário.
+code: 
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Digite uma letra maiuscula: ");
+		char letra = input.nextLine().charAt(0);
+		
+		switch (letra) {
+		case 'A':
+			System.out.println("Austrália.");
+			break;
+		case 'B':
+			System.out.println("Brasil");
+			break;
+		case 'C':
+			System.out.println("China");
+			break;
+		default:
+			System.out.println("Países não cadastrados ainda...");
+		}
+	}
+}
+
+
