@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Digite seu nome: ");
+		String nome = input.nextLine();
+		System.out.printf("Olá," + nome + ". Digite sua idade: ");
+		int idade = input.nextInt();
+		System.out.printf("Ok, você tem " + idade + " anos. Agora digite sua altura: ");
+		double altura = input.nextDouble();
+		System.out.printf("Entendi, " + nome+ ". Você tem "+ idade+ " anos e mede " +altura+ "cm.");
+		
+		
+
+	}
+}
+----------------------------------------------------------------------------
+1. Crie um programa em Java que receba 5 números e imprima a mensagem “Múltiplo de 2” caso a soma dos números digitados seja múltiplo de 2.
+Dica: para saber se um número é multiplo de 2, basta verificar se o resto da divisão (operador %) do número por 2 é igual a zero.
+
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int cont = 0;
+		for (int n = 1; n <= 5; n++) {
+			System.out.print("Digite um número: ");
+			int num = input.nextInt();
+			if (num % 2 == 0) {
+				System.out.printf("%d é múltiplo de 2!", num);
+			} else {
+				System.out.printf("%d não é múltiplo de 2.", num);
+			}
+		}
+
+	}
+}
+----------------------------------------------------------------------------
